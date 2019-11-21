@@ -1,0 +1,17 @@
+<section id="favorites-spots">
+    {{#each user.favorites}}
+    <div class="spot-container">
+        <div class="spot-image-container">
+
+        </div>
+        <div class="spot-infos">
+            <ul>
+                <li>{{this.spotName}}</li>
+                <li>{{this.wind}} noeuds max attendus</li>
+                <li>{{this.maxWindValue}} max wind</li>
+                <li><button><a href="{{this.url}}">Voir la page windguru</a></button></li>
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</section>

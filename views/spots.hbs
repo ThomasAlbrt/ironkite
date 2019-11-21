@@ -1,0 +1,17 @@
+<section id="spots-list">
+    {{#each spots}}
+    <div class="spot-container">
+        <div class="spot-image-container">
+
+        </div>
+        <div class="spot-infos">
+            <ul>
+                <li>{{this.spotName}}</li>
+                <li>{{this.windMax}} noeuds max attendus</li>
+                <li><button><a href="{{this.url}}">Voir la page windguru</a></button></li>
+                <i data-id="{{this._id}}" class="far fa-heart"></i>
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</section>
