@@ -15,7 +15,7 @@ regionSelector.onchange = (evt) => {
             let spots = apiRes.data[0];
 
             console.log(favorites);
-            // console.log(spots);
+            console.log(spots);
 
             updateSpotsContainer(spots, favorites)
         })
@@ -27,13 +27,14 @@ function updateSpotsContainer(spots, favorites) {
     spotsContainer.innerHTML = "";
 
     for (let spot of spots) {
+        const maxWind = Math.max(...spot.wind);
         const tpl = `
         <div class="spot-container">
         <div class="spot-image-container"></div>
         <div class="spot-infos">
             <ul>
                 <li>${spot.spotName}</li>
-                <li>${spot.wind}</li>
+                <li>${maxWind} noeuds max attendus</li>
                 <li>${spot.region}</li>
                 <li><button><a href="${spot.url}">Voir la page windguru</a></button></li>
                 <i data-id="${spot._id}" class="far fa-heart after-call"></i>
