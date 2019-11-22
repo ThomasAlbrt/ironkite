@@ -1,0 +1,61 @@
+#spots-wrapper {
+    padding: 60px 20px 0;
+}
+
+.spot-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1rem;
+}
+
+.spot-container li {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background: #EDF4FF;
+    padding: 20px;
+    box-shadow: 0 0 1px 0 rgba(19, 45, 74, .24), 0 24px 24px 0 rgba(19, 45, 74, .04), 0 2px 2px 0 rgba(19, 45, 74, .04), 0 4px 4px 0 rgba(19, 45, 74, .04), 0 8px 8px 0 rgba(19, 45, 74, .04), 0 16px 16px 0 rgba(19, 45, 74, .04);
+    transition: 0.2s;
+    position: relative;
+}
+
+.spot-container li:hover {
+    transform: translate(0px, -5px);
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.spot-container a {
+    text-decoration: none;
+}
+
+.spot-infos {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.spot-infos h4 {
+    color: dodgerblue;
+}
+
+.spot-infos button {
+    background: dodgerblue;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 4px;
+}
+
+.spot-infos button a {
+    color: white;
+}
+
+.fa-times {
+    color: #CDCDCD;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}

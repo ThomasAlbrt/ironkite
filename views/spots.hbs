@@ -1,3 +1,11 @@
+<div id="region-selector">
+    <label for="region">Region</label>
+    <select name="region" id="selector">
+        <option disabled selected value> -- select an option -- </option>
+        <option class="region">Normandie</option>
+        <option class="region">Bretagne</option>
+    </select>
+</div>
 <section id="spots-list">
     {{#each spots}}
     <div class="spot-container">
@@ -6,10 +14,14 @@
         </div>
         <div class="spot-infos">
             <ul>
-                <li>{{this.spotName}}</li>
+                <h4>{{this.spotName}}</h4>
                 <li>{{this.windMax}} noeuds max attendus</li>
+                <li>{{this.region}}</li>
                 <li><button><a href="{{this.url}}">Voir la page windguru</a></button></li>
-                <i data-id="{{this._id}}" class="far fa-heart"></i>
+                <div class="heart-icon">
+                    <i data-id="{{this._id}}" class="far fa-heart"></i>
+                </div>
+
             </ul>
         </div>
     </div>

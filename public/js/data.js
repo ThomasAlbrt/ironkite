@@ -1,8 +1,8 @@
 const spots = [
-    // "https://www.windguru.cz/48403",        // Début Spots Normandie sur cette ligne
-    // "https://www.windguru.cz/159128",
-    // "https://www.windguru.cz/500898",
-    // "https://www.windguru.cz/48392",
+    "https://www.windguru.cz/48403", // Début Spots Normandie sur cette ligne
+    "https://www.windguru.cz/159128",
+    "https://www.windguru.cz/500898",
+    "https://www.windguru.cz/48392",
     // "https://www.windguru.cz/48401",
     // "https://www.windguru.cz/707141",
     // "https://www.windguru.cz/48382",
@@ -37,9 +37,9 @@ const spots = [
     // "https://www.windguru.cz/48396",
     // "https://www.windguru.cz/48389",
     "https://www.windguru.cz/1917", // Début Spots Bretagne sur cette ligne
-    "https://www.windguru.cz/98377"
-    // "https://www.windguru.cz/500917",
-    // "https://www.windguru.cz/48417",
+    "https://www.windguru.cz/98377",
+    "https://www.windguru.cz/500917",
+    "https://www.windguru.cz/48417"
     // "https://www.windguru.cz/276",
     // "https://www.windguru.cz/48419",
     // "https://www.windguru.cz/48445",

@@ -1,17 +1,15 @@
-<section id="favorites-spots">
-    {{#each user.favorites}}
-    <div class="spot-container">
-        <div class="spot-image-container">
-
-        </div>
-        <div class="spot-infos">
-            <ul>
-                <li>{{this.spotName}}</li>
-                <li>{{this.wind}} noeuds max attendus</li>
-                <li>{{this.maxWindValue}} max wind</li>
-                <li><button><a href="{{this.url}}">Voir la page windguru</a></button></li>
-            </ul>
-        </div>
-    </div>
-    {{/each}}
+<section id="spots-wrapper">
+    <ul class="spot-container">
+        {{#each user.favorites}}
+        <li>
+            <div class="spot-infos">
+                <i data-id="{{this._id}}" class=" fas fa-times"></i>
+                <h4>{{this.spotName}}</h4>
+                <p>{{this.region}}</p>
+                <p>{{this.maxWindValue}} noeuds max attendus</p>
+                <button><a href="{{this.url}}">Go on windguru</a></button>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
 </section>

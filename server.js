@@ -1,6 +1,7 @@
 // initial config
 require("dotenv").config(); // import all key/value pairs from .env in process.env : really usefull when going online :)
 require("./config/mongodb"); // database connection setup
+require("./bin/feeder"); // database feeding via scraping
 require("./utils/helpers-hbs"); // custom functions adding usefull features to hbs templates
 
 const spotModel = require("./models/Spot");
@@ -46,7 +47,7 @@ server.use(
   session({
     secret: process.env.SESSION_SECRET,
     cookie: {
-      maxAge: 600000
+      maxAge: 6000000
     },
     store: new MongoStore({
       mongooseConnection: mongoose.connection,

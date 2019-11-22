@@ -1,8 +1,10 @@
 <header id="header_main">
     <nav id="nav_main" class="nav">
         <div id="main-links">
+            {{#if isLoggedIn}}
             <a class="link" href="/home">Home</a>
             <a class="link" href="/all-spots">Spots</a>
+            {{/if}}
         </div>
         <div id="log">
             {{#unless isLoggedIn}}
