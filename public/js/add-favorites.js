@@ -24,6 +24,7 @@ function removeFromFavoritesPage(evt) {
         .then(apiRes => {
             apiRes.data.favorites.forEach(fav => console.log(fav._id))
             let favoriteSpots = apiRes.data.favorites;
+            console.log(favoriteSpots);
             updateFavPage(favoriteSpots)
         })
         .catch(err => console.log(err));
@@ -32,13 +33,14 @@ function removeFromFavoritesPage(evt) {
 function updateFavPage(spots) {
     favoritesContainer.innerHTML = "";
     spots.forEach(spot => {
+        const maxWind = Math.max(...spot.wind);
         const tpl = `
         <li>
             <div class="spot-infos">
                 <i data-id="${spot._id}" class=" fas fa-times"></i>
                 <h4>${spot.spotName}</h4>
                 <p>${spot.region}</p>
-                <p>${spot.wind} noeuds max attendus</p>
+                <p>${maxWind} noeuds max attendus</p>
                 <button><a href="${spot.url}">Go on windguru</a></button>
             </div>
         </li>`;
