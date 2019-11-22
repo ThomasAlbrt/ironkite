@@ -30,9 +30,13 @@ body {
 }
 
 #main-links {
-    width: 15%;
+    width: 30%;
     display: flex;
     justify-content: space-evenly;
+}
+
+#nav_logout {
+    margin-right: 20px;
 }
 
 #hero {

@@ -4,6 +4,7 @@
             {{#if isLoggedIn}}
             <a class="link" href="/home">Home</a>
             <a class="link" href="/all-spots">Spots</a>
+            <a class="link" href="/favorites">Favorites</a>
             {{/if}}
         </div>
         <div id="log">
@@ -11,14 +12,7 @@
             <a class="link" href="/signin">Login</a>
             {{/unless}}
             {{#if isLoggedIn}}
-            <a href="/favorites" id="nav_favorites" class="button-ternary flexed-item nav-end-item">
-                <span class="btn-text">Favorites</span>
-            </a>
-            {{/if}}
-            {{#if isLoggedIn}}
-            <a href="/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
-                <span class="btn-text">Log out</span>
-            </a>
+            <a class="link" href="/logout" id="nav_logout">Log out</a>
             {{/if}}
         </div>
     </nav>
