@@ -29,4 +29,4 @@ async function feedDb() {
     }
 }
 
-// feedDb();
+feedDb();
