@@ -10,10 +10,12 @@ regionSelector.onchange = (evt) => {
             region: region
         })
         .then(apiRes => {
-            console.log(apiRes.data[0]);
 
             let favorites = apiRes.data[1].favorites;
             let spots = apiRes.data[0];
+
+            console.log(favorites);
+            // console.log(spots);
 
             updateSpotsContainer(spots, favorites)
         })
@@ -23,11 +25,8 @@ regionSelector.onchange = (evt) => {
 
 function updateSpotsContainer(spots, favorites) {
     spotsContainer.innerHTML = "";
-    spots.forEach(spot => {
-        // heartButtons.forEach(btn => {
-        //     let heartClass;
-        //     favorites.includes(btn.getAttribute("data-id")) ? heartClass = "fas" : heartClass = "far";
-        // })
+
+    for (let spot of spots) {
         const tpl = `
         <div class="spot-container">
         <div class="spot-image-container"></div>
@@ -37,11 +36,18 @@ function updateSpotsContainer(spots, favorites) {
                 <li>${spot.wind}</li>
                 <li>${spot.region}</li>
                 <li><button><a href="${spot.url}">Voir la page windguru</a></button></li>
-                <i data-id="5dd6611b1ea85439a952f202" class="far fa-heart"></i>
+                <i data-id="${spot._id}" class="far fa-heart after-call"></i>
             </ul>
         </div>
     </div>`;
+
         spotsContainer.innerHTML += tpl;
-    })
+    }
+
+    const heartPostAxios = document.querySelectorAll(".after-call")
+
+    for (let btn of heartPostAxios) {
+        if (favorites.includes(btn.getAttribute("data-id"))) btn.classList.add("fas");
+    }
 
 }

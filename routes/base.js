@@ -7,15 +7,11 @@ const data = require("../public/js/scraping");
 
 
 router.get("/", (req, res) => {
-    res.render("index", {
-        js: ["best-spot.js"]
-    })
+    res.render("index")
 });
 
 router.get("/home", (req, res) => {
-    res.render("index", {
-        js: ["best-spot.js"]
-    })
+    res.render("index")
 });
 
 router.get("/get-favorites-spots", protectAdminRoute, (req, res) => {
@@ -135,29 +131,5 @@ router.get("/favorites", protectAdminRoute, (req, res) => {
         .catch(err => console.log(err))
 })
 
-router.post("/best-spot", protectAdminRoute, (req, res) => {
-    spotModel
-        .aggregate([{
-            '$project': {
-                'spotName': 1,
-                'region': 1,
-                'windMax': {
-                    '$max': '$wind'
-                },
-                'url': 1
-            }
-        }, {
-            '$sort': {
-                'windMax': -1
-            }
-        }, {
-            '$limit': 1
-        }])
-        .then(dbRes => {
-            console.log(dbRes)
-            res.send(dbRes)
-        })
-        .catch(err => console.log(err))
-})
 
 module.exports = router;
