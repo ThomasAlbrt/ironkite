@@ -48,7 +48,7 @@
 }
 
 #form_user .button-primary {
-    margin: 1.5rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
 }
 
 input {
@@ -58,7 +58,7 @@ input {
     width: 100%;
 }
 
-.form-item-wrapper:nth-child(1) {
+.form-item-wrapper {
     margin-bottom: 20px;
 }
 
