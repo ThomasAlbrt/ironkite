@@ -33,7 +33,7 @@ function updateSpotsContainer(spots, favorites) {
         <div class="spot-image-container"></div>
         <div class="spot-infos">
             <ul>
-                <li>${spot.spotName}</li>
+                <h4>${spot.spotName}</h4>
                 <li>${maxWind} noeuds max attendus</li>
                 <li>${spot.region}</li>
                 <li><button><a href="${spot.url}">Voir la page windguru</a></button></li>
