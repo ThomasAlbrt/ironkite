@@ -36,10 +36,10 @@ const spots = [
     // "https://www.windguru.cz/500897",
     // "https://www.windguru.cz/48396",
     // "https://www.windguru.cz/48389",
-    "https://www.windguru.cz/1917", // Début Spots Bretagne sur cette ligne
-    "https://www.windguru.cz/98377",
-    "https://www.windguru.cz/500917",
-    "https://www.windguru.cz/48417"
+    // "https://www.windguru.cz/1917", // Début Spots Bretagne sur cette ligne
+    // "https://www.windguru.cz/98377",
+    // "https://www.windguru.cz/500917",
+    // "https://www.windguru.cz/48417"
     // "https://www.windguru.cz/276",
     // "https://www.windguru.cz/48419",
     // "https://www.windguru.cz/48445",
