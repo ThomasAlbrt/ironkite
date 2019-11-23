@@ -43,7 +43,7 @@ const spotScraping = async () => {
             dataObj = {
                 spotName: spotName,
                 wind: windArr,
-                region: "Bretagne",
+                region: "Normandie",
                 url: url
             }
 

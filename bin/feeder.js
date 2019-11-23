@@ -8,12 +8,10 @@ async function feedDb() {
         apiRes.forEach(spot => {
             spotModel
                 .findOneAndUpdate({
-                    spotName: spot.spotName,
-                    wind: spot.wind,
-                    region: spot.region,
                     url: spot.url
                 }, {
-                    expire: new Date()
+                    url: spot.url,
+                    wind: spot.wind
                 }, {
                     upsert: true,
                     new: true,
@@ -29,4 +27,4 @@ async function feedDb() {
     }
 }
 
-// feedDb();
+feedDb();
