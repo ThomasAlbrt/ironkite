@@ -24,7 +24,7 @@ const spotScraping = async () => {
             let dataObj = {};
 
             const spotName = await page.evaluate(() => {
-                return document.querySelector("#forecasts-page-content > div.spot-header > div.spot.wg > a:nth-child(1) > div").textContent;
+                return document.querySelector(".spot-name.wg-guide").textContent;
             })
 
             console.log(spotName)
