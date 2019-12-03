@@ -23,6 +23,7 @@ const spotScraping = async () => {
 
             let dataObj = {};
 
+            await page.waitForSelector(".spot-name.wg-guide");
             const spotName = await page.evaluate(() => {
                 return document.querySelector(".spot-name.wg-guide").textContent;
             })
